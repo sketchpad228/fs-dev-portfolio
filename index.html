@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
     <title>Account Opening</title>
   </head>
   <body>
@@ -17,47 +23,100 @@
       </header>
 
       <main>
-        <div class="parent-container">Email and name<section>
-            <form action="">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email">
-                <input type="password" name="password" id="password" placeholder="Enter your password">
-                <input type="number" name="number" id="number">
-                <button style="background-color: brown" type="button" class="send-btn-class" id="send-btn-id">Send</button>
+        <div class="parent-container">
+          <div class="w-100 d-flex justify-content-center">
+            <form class="row g-3 w-75">
+			        <div class="col-md-6">
+              		<label for="first_name" class="form-label">First name</label>
+              		<input type="text" class="form-control" id="first_name" />
+			        </div>
+			        <div class="col-md-6">
+              
+			  		      <label for="second_name" class="form-label">Second name</label>
+              	  <input type="text" class="form-control" id="second_name" />
+				      
+			        </div>
+              <div class="col-md-6">
+                <label for="dob">Date of birth</label>
+                <input type="date" class="form-control" id="dob" />
+              </div>
+
+              <div class="col-md-6">
+                <label for="ssn">Social Security Number</label>
+                <input type="number" class="form-control" id="ssn" />
+              </div>
+
+              <div class="col-12">
+                <label for="phoneNo" class="form-label">Phone number</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="phoneNo"
+                />
+              </div>
+
+              <div class="col-12">
+                <label for="inputAddress" class="form-label">Address</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputAddress"
+                  placeholder="1234 Main St"
+                />
+              </div>
+
+              <div class="col-md-6">
+                <label for="city" class="form-label">City</label>
+                <input type="text" class="form-control" id="city" />
+              </div>
+
+              <div class="col-md-6">
+                <label for="state" class="form-label">State</label>
+                <input type="text" class="form-control" id="state" />
+              </div>
+
+              <!-- <div class="col-md-6">
+                <label for="inputState" class="form-label">State</label>
+                <select id="inputState" class="form-select">
+                  <option selected>Choose...</option>
+                  <option>...</option>
+                </select>
+              </div> -->
+
+              <div class="col-12">
+                <label for="zipCode" class="form-label">ZIP code</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="zipCode"
+                />
+              </div>
+
+              <div class="col-12">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="gridCheck"
+                  />
+                  <label class="form-check-label" for="gridCheck">
+                  I agree to the terms
+                  </label>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <button style="background-color: blue" type="button" class="send-btn-class" id="send-btn-id">Create an Account</button>
+              </div>
+              
             </form>
-        </section></div>
+		      </div>
 
-        <div class="display-container">
-          <div class="block-container">
-            This is an example of block container. It spans full width of the
-            page.
-          </div>
-          <div class="block-container">
-            This is an example of block container. It spans full width of the
-            page.
-          </div>
-          <div class="block-container">
-            This is an example of block container. It spans full width of the
-            page.
-          </div>
-
-          <button class="inline-element">Inline Element</button>
-          <button class="inline-element">Inline Element</button>
-          <button class="inline-element">Inline Element</button>
-
-          <div class="inline-block">
-            This is an example of how inline-block works
-          </div>
-          <div class="inline-block">
-            This is an example of how inline-block works
-          </div>
-          <div class="inline-block">
-            This is an example of how inline-block works
-          </div>
-
-          <div class="float-container">
-            <div class="float-box">Box</div>
-          </div>
+          <!-- <div class="display-container">
+            <div class="float-container">
+              <div class="float-box">Box</div>
+            </div>
+          </div> -->
         </div>
       </main>
     </div>
