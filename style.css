@@ -1,0 +1,228 @@
+* {
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+
+
+.parent-container {
+	background-color: beige;
+	border: 2px solid black;
+	width: 75vw;
+	height: 75vh;
+	padding: 5px;
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 25px;
+
+	/* ? Toggle to understand absolute against static vs relative parent */
+	position: relative;
+}
+
+.child {
+	padding: 25px;
+	border: 3px solid black;
+}
+
+/* 
+	? Static
+	* default
+	* positioned in relation to elements
+	* top, bottom, left, right, and z-index properties have NO effect
+*/
+
+.static {
+	border: 2px solid red;
+	background-color: red;
+
+	position: static;
+	top: 250px;
+}
+
+/* 
+	? Relative
+	* just like static
+	* can be changed using top, bottom, left, right, and z-index
+	* it moves relative to its original static position
+*/
+
+.relative {
+	border: 2px solid rebeccapurple;
+	background-color: rebeccapurple;
+
+	/* position: relative; */
+	top: 25px;
+	left: 50px;
+}
+
+/* 
+	? Absolute
+	* removes the element from the flow
+	* positions it relative to the parent container
+	* position defined using top, bottom, left, right, and z-index
+
+	! IMPORTANT DISTINCTION
+	* positions to the closest relative container
+	* if parent is static, it will move outside of the parent container
+	* if parent is relative, it will move to the edge of the parent container
+
+*/
+
+.absolute {
+	border: 2px solid green;
+	background-color: green;
+
+	/* position: absolute; */
+	top: 0;
+	left: 0;
+}
+
+/* 
+	? Fixed
+	* like absolute
+	* positioned to viewport
+	* doesn't move when scrolling
+	* position defined using top, bottom, left, right, and z-index
+*/
+
+.fixed {
+	border: 2px solid teal;
+	background-color: teal;
+
+	/* position: fixed; */
+	top: 0;
+}
+
+/* 
+	? Sticky
+	* mix of relative and fixed
+	* relative to the flow
+	* position defined with top, bottom, left, right, and z-index BUT
+	* when you start scrolling
+	* stays fixed when scrolling; relative when stationary
+*/
+
+.sticky {
+	border: 2px solid gray;
+	background-color: gray;
+
+	/* position: sticky; */
+	top: 25px;
+	left: 25px;
+}
+
+/* 
+	? Display Property
+	* defines whether an element is block, inline, or inline-block
+	* blocks are created top to bottom
+	* inline are positioned side-by-side
+
+	? Inherent Block Elements
+	* nav, div, header, p, etc.
+
+	? Inherent Inline Elements
+	* a, button, span, strong, b, em, img
+*/
+
+.block-container {
+	border: 1px solid black;
+	margin: 5px 0;
+
+	/* block can be turned into inline */
+	/* display: inline; */
+}
+
+.inline-element {
+	border: 1px solid salmon;
+
+	/* inline can be turned into block */
+	display: block;
+
+	/* ? note: act as block but don't occupy full width */
+}
+
+.inline-block {
+	/* it's a div for now which is a block element */
+    border: 1px solid rebeccapurple;
+
+	display: inline-block;
+
+    /*  inline cannot set width, it's set to original content width */
+    width: 250px;
+
+    /* inline block allows us to set block element into inline and change it's width */
+}
+
+/* 
+    ? Float
+    * float elements from left to right 
+*/
+
+.float-container {
+    /* width: 100%; */
+    width: 100svw;
+    height: 25vw;
+    border: 1px solid blue;
+}
+
+.float-box {
+    width: 50px;
+    height: 50px;
+    background-color: pink;
+
+    float: right;
+}
+
+/* ? ID selector (using the #) */
+#main-header {
+    background-color: blue;
+    color: white;
+    font-size: 20px;
+    padding: 20px 10px;
+
+    h1 {
+        text-align: center;
+    }
+}
+
+header {
+
+	padding: 2em 3em;
+
+	display: flex;
+	/* turns it into a flex container */
+
+	flex-direction: column;
+	/* changes the main axis direction (default is row) */
+
+	justify-content: space-between;
+	/* positions along the main axis */
+
+	align-items: center;
+	/* positions along the cross axis */
+
+
+	/* 
+		! If nothing happens, always check how much spacing you have !
+	*/
+}
+
+main {
+	display: flex;
+
+	flex-wrap: wrap;
+	/* handles wrap of elements */
+
+	justify-content: center;
+	align-items: center;
+
+	/* height: 200vh; */
+	/* comment back in to play with align-content */
+
+	/* align-content: flex-start; */
+	/* aligns against cross axis when wrapping is involved */
+
+	gap: var(--gap-primary);
+}
+
