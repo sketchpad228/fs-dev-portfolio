@@ -4,29 +4,69 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link
+    <link rel="stylesheet" 
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-    <title>Account Opening</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Patrick Dignan - Developer Portfolio</title>
   </head>
+
   <body>
     <div class="main-container">
-      <header id="main-header">
+      <!-- <header id="main-header"> -->
         <!-- id targets single element -->
-        <h1 class="main-header">Patrick Dignan</h1>
-        <p class="sub-header">
-          Hello, my name is Patrick. I am based in England, and I have been programming for over 25 years.
-          I have and continue to use the various iterations of the C family (C, C++, C#) for various software
-          developments projects, as well as Java and GameMaker. I also use HTML and CSS for web development.
-        </p>
-      </header>
+        <!-- <h1 class="main-header">Patrick Dignan</h1> -->
+      <!-- </header> -->
+      <nav id="nav-bar" class="nav-bar">
+        <a class="nav-link" href="#about-me">About Me</a>
+        <a class="nav-link" href="">Contact</a>
+        <a class="nav-link" href="./assets/dog.avif">Me</a>
+        <a class="nav-link" target="_blank" href="https://www.linkedin.com/in/patrick-dignan-12457a27a/">Resume</a>
+      </nav>
+      <main class="main-container">
+        <div class="hero-section">
+          <div class="w-100 d-flex justify-content-center">
+            <article class="article">
+              <h2 class="name">Patrick Dignan, Software Developer</h2>
+              <p class="description">
+                <!-- Intellisense version -->
+                Welcome to my portfolio! I am a passionate developer with over 25 years of experience in programming.
+                I specialize in various iterations of the C family (C, C++, C#), as well as Java and GameMaker. 
+                Additionally, I have expertise in web development using HTML and CSS. 
+                Explore my <a href="#about-me">work</a> and feel free to reach out for collaborations or inquiries.
+              
+                <!-- My version -->
+                <!-- Hello, my name is Patrick. I am based in England, and I have been programming for over 25 years. 
+                I have and continue to use the various iterations of the C family (C, C++, C#) for various software 
+                developments projects, as well as Java and GameMaker. I also use HTML and CSS for web development. -->
+              </p>
+            </article>
+		      </div>
 
-      <main>
+          <!-- <div class="display-container">
+            <div class="float-container">
+              <div class="float-box">Box</div>
+            </div>
+          </div> -->
+        </div>
+        <!-- <h2 id="about-me">About Me</h2> -->
         <div class="parent-container">
           <div class="w-100 d-flex justify-content-center">
+            <h2 id="about-me">About Me</h2>
+            <p class="paragraphs">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
+              Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, 
+              ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, 
+              fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, 
+              justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper 
+              nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. 
+              Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. 
+              Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. 
+              Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque 
+              sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus.
+            </p>
             <form class="row g-3 w-75">
 			        <div class="col-md-6">
               		<label for="first_name" class="form-label">First name</label>
@@ -120,6 +160,7 @@
             </div>
           </div> -->
         </div>
+        
       </main>
     </div>
   </body>
