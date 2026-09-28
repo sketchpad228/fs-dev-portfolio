@@ -7,7 +7,7 @@
 
 .parent-container {
 	background-color: beige;
-	border: 2px solid black;
+	border: 2px rounded black;
 	width: 75vw;
 	height: 85vh;
 	padding: 5px;
