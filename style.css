@@ -19,15 +19,36 @@
 } */
 
 .main-container {
-	display: flex;
-	flex-direction: column;
+	/* display: flex; */
+	/* flex-direction: column; */
 	/* align-items: center; */
-	justify-content: center;
+	/* justify-content: center; */
 	background: no-repeat url("/assets/photo-1661250136420-56b685db54f1.avif");
 	min-height: 100vh;
 	background-color: black;
 	/* padding: 20px; */
-	position: sticky;
+	/* position: sticky; */
+}
+
+header {
+
+	padding: 2em 3em;
+
+	display: flex;
+	/* turns it into a flex container */
+
+	flex-direction: column;
+	/* changes the main axis direction (default is row) */
+
+	justify-content: space-between;
+	/* positions along the main axis */
+
+	align-items: center;
+	/* positions along the cross axis */
+
+	/* 
+		! If nothing happens, always check how much spacing you have !
+	*/
 }
 
 /* The navigation bar */
@@ -68,7 +89,6 @@
     margin: 10px 10px;
 }
 
-
 .nav-bar a:hover {
 		float: left;
   		display: block;
@@ -76,22 +96,7 @@
   		text-align: center;
   		/* padding: 14px 16px; */
   		text-decoration: none;
-  		
-    /* text-decoration: none; */
-    /* display: flex; */
-
-	/* flex-wrap: wrap; */
-	/* handles wrap of elements */
-
-	/* justify-content: center; */
-	/* align-items: center; */
-
-	/* height: 200vh; */
-	/* comment back in to play with align-content */
-
-	/* align-content: flex-start; */
-	/* aligns against cross axis when wrapping is involved */
-
+  	
 	/* gap: var(--gap-primary); */
     background-color: brown;
     /* margin: 10px 10px; */
@@ -105,14 +110,19 @@
   		/* padding: 14px 16px; */
   		text-decoration: none;
   		
-	/* text-decoration: none; */
-	/* display: flex; */
+	/* gap: var(--gap-primary); */
+	background-color: red;
+	/* margin: 10px 10px; */
+}
 
-	/* flex-wrap: wrap; */
+main {
+	display: flex;
+
+	flex-wrap: wrap;
 	/* handles wrap of elements */
 
-	/* justify-content: center; */
-	/* align-items: center; */
+	justify-content: center;
+	align-items: center;
 
 	/* height: 200vh; */
 	/* comment back in to play with align-content */
@@ -121,8 +131,6 @@
 	/* aligns against cross axis when wrapping is involved */
 
 	/* gap: var(--gap-primary); */
-	background-color: red;
-	/* margin: 10px 10px; */
 }
 
 .hero-section{
@@ -154,27 +162,71 @@
 	position: relative;
 }
 
-.about-me-section {
-	background-color: beige;
-	border: 2px rounded black;
-	width: 75vw;
-	height: 85vh;
-	padding: 5px;
-	font-family: Arial, Helvetica, sans-serif;
-	margin: 25px;
+/* .w-100{
+	/* background-color: beige; */
+	/* border: 2px rounded black; */
+	/* width: 75vw; */
+	/* height: 85vh; */
+	/* padding: 5px; */
+	/* font-family: Arial, Helvetica, sans-serif; */
+	/* margin: 25px; */
 
-	display: flex;
+	/* display: flex; */
 	/* flex-direction: row; */
-	flex-wrap: wrap;
+	/* flex-wrap: wrap; */
 	/* handles wrap of elements */
 
-	justify-content: center;
+	/* justify-content: center; */
+	/* align-items: center; */
+
+	/* gap: var(--gap-primary); */
+	/* gap: 25px; */
+
+	/* position: relative; */
+/* } */
+
+.about-me-section{
+	display: flex;
+	flex-direction: row;
+	/* flex-wrap: wrap; */
+	/* handles wrap of elements */
+
+	/* justify-content: center; */
 	align-items: center;
+	background-color: beige;
+	border: 2px rounded black;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	/* width: 75vw; */
+	/* height: 850vh; */
+	/* padding: 5px; */
+	/* font-family: Arial, Helvetica, sans-serif; */
+	/* margin: 25px; */
+	/* gap: var(--gap-primary); */
+	gap: 25px;
 
-	gap: var(--gap-primary);
-
-	position: relative;
+	/* position: relative; */
 }
+
+.image-container, .responsive-text {
+	flex: 1;
+}
+
+.image-container img{
+	width: 100%;
+	height: auto;
+	display: block;
+	object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+	.about-me-section{
+		flex-direction: column; /* Stack the elements vertically on smaller screens */
+	}
+}
+
+/* The max-width above also applies to responsive design (web browser) as well as mobile */
 
 .child {
 	padding: 25px;
@@ -229,45 +281,3 @@
 
     float: right;
 }
-
-
-header {
-
-	padding: 2em 3em;
-
-	display: flex;
-	/* turns it into a flex container */
-
-	flex-direction: column;
-	/* changes the main axis direction (default is row) */
-
-	justify-content: space-between;
-	/* positions along the main axis */
-
-	align-items: center;
-	/* positions along the cross axis */
-
-
-	/* 
-		! If nothing happens, always check how much spacing you have !
-	*/
-}
-
-main {
-	display: flex;
-
-	flex-wrap: wrap;
-	/* handles wrap of elements */
-
-	justify-content: center;
-	align-items: center;
-
-	/* height: 200vh; */
-	/* comment back in to play with align-content */
-
-	/* align-content: flex-start; */
-	/* aligns against cross axis when wrapping is involved */
-
-	gap: var(--gap-primary);
-}
-
