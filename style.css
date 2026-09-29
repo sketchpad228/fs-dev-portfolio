@@ -21,11 +21,13 @@
 /* The navigation bar */
 .nav-bar{
 	display: flex;
+	top: 0; /* positions the nav-bar at the top of the page */
+	z-index: 1000; /* ensures the nav-bar stays on top of other elements */
     background-color: blue;
     color: white;
     font-size: 20px;
     padding: 20px 10px;
-
+	position: sticky;
     h1 {
         text-align: center;
     }
