@@ -256,10 +256,10 @@ main {
 .about-me-section{
 	display: flex;
 	flex-direction: row;
-	/* flex-wrap: wrap; */
+	flex-wrap: wrap;
 	/* handles wrap of elements */
 
-	/* justify-content: center; */
+	justify-content: center;
 	align-items: center;
 	background-color: beige;
 	border: 2px rounded black;
@@ -283,7 +283,7 @@ main {
 	flex-wrap: wrap;
 	/* handles wrap of elements */
 
-	/* justify-content: center; */
+	justify-content: center;
 	/* align-items: center; */
 	background-color: beige;
 	border: 2px rounded black;
@@ -299,6 +299,7 @@ main {
 	gap: 25px;
 
 	/* position: relative; */
+	
 }
 
 .projects-section{
@@ -325,6 +326,15 @@ main {
 	/* position: relative; */
 }
 
+.card-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	/* justify-content: center; */
+	/* align-items: center; */
+	gap: var(--gap-primary);
+}
+
 .card {
 	display: flex;
 	flex-direction: column;
@@ -342,10 +352,10 @@ face-pic {
 }
 
 .image-container img{
-	width: 100%;
-	height: auto;
-	display: block;
-	object-fit: cover;
+	/* width: 100%; */
+	/* height: auto; */
+	/* display: block; */
+	/* object-fit: cover; */
 }
 
 @media screen and (max-width: 768px) {
