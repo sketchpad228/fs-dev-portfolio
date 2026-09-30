@@ -5,6 +5,11 @@
 	border: 0;
 }
 
+:root {
+	--color-secondary-gray: #5b5b5b;
+	--gap-primary: 1.5em;
+}
+
 /* ? ID selector (using the #) */
 /* #main-header {
 	display: flex;
@@ -27,29 +32,33 @@
 	min-height: 100vh;
 	background-color: black;
 	/* padding: 20px; */
-	/* position: sticky; */
+	/* position: fixed; */
 }
 
-header {
+/* bkgrnd-picture {
+	background: no-repeat url("/assets/photo-1661250136420-56b685db54f1.avif");
+	position: fixed;
+} */
 
+/* header {
 	padding: 2em 3em;
 
 	display: flex;
 	/* turns it into a flex container */
 
-	flex-direction: column;
+	/* flex-direction: column; */
 	/* changes the main axis direction (default is row) */
 
-	justify-content: space-between;
+	/* justify-content: space-between; */
 	/* positions along the main axis */
 
-	align-items: center;
+	/* align-items: center; */
 	/* positions along the cross axis */
 
 	/* 
 		! If nothing happens, always check how much spacing you have !
 	*/
-}
+/* } */
 
 /* The navigation bar */
 .nav-bar{
@@ -68,7 +77,6 @@ header {
 
 /* The links in the navigation bar */
 .nav-link {
-	
     text-decoration: none;
     display: flex;
 
@@ -133,6 +141,20 @@ main {
 	/* gap: var(--gap-primary); */
 }
 
+.padding-for-nav-bar{
+	display: flex;
+	top: 0; /*positions the nav-bar at the top of the page */
+	/* z-index: 1000; ensures the nav-bar stays on top of other elements */
+    /* background-color: blue; */
+    color: white;
+    font-size: 20px;
+    padding: 20px 10px;
+	position: sticky;
+    h1 {
+        text-align: center;
+    }
+}
+
 .hero-section{
 	color: white;
 	/* background-color: beige; */
@@ -186,38 +208,98 @@ main {
 /* } */
 
 .about-me-section{
+	color: white;
 	display: flex;
 	flex-direction: row;
-	/* flex-wrap: wrap; */
+	flex-wrap: wrap;
 	/* handles wrap of elements */
 
-	/* justify-content: center; */
+	justify-content: center;
 	align-items: center;
 	background-color: beige;
 	border: 2px rounded black;
 	width: 100%;
 	max-width: 1200px;
-	margin: 0 auto;
-	/* width: 75vw; */
-	/* height: 850vh; */
-	/* padding: 5px; */
+	/* margin: 0 auto; */
+	width: 75vw;
+	height: 85vh;
+	padding: 0 50px;
 	/* font-family: Arial, Helvetica, sans-serif; */
-	/* margin: 25px; */
+	margin: 25px;
 	/* gap: var(--gap-primary); */
 	gap: 25px;
 
 	/* position: relative; */
+	position: static;
 }
 
 .image-container, .responsive-text {
 	flex: 1;
+	/* position: absolute; */
 }
 
 .image-container img{
-	width: 100%;
-	height: auto;
+	/* width: 100%; */
+	/* height: auto; */
 	display: block;
 	object-fit: cover;
+}
+
+.skills-section{
+	color: white;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	/* handles wrap of elements */
+
+	justify-content: center;
+	align-items: center;
+	background-color: beige;
+	border: 2px rounded black;
+	width: 100%;
+	max-width: 1200px;
+	/* margin: 0 auto; */
+	width: 75vw;
+	height: 85vh;
+	padding: 0 50px;
+	/* font-family: Arial, Helvetica, sans-serif; */
+	margin: 25px;
+	/* gap: var(--gap-primary); */
+	gap: 25px;
+
+	/* position: relative; */
+	position: static;
+}
+
+.card
+{
+	display: flex;
+	flex-direction: column;
+	border: 1px solid var(--color-secondary-gray);
+	max-width: 250px;
+	height: 350px;
+	/* flex: 1; */
+	/* 
+		* flex-grow: 1
+		* flex-shrink: 1
+		* flex-basis: 0%
+	*/
+	gap: 10px;
+}
+
+.face-pic {
+	width: 250px;
+}
+
+.skill-heading::after {
+	content: "\2713";
+	/* content: "";
+	background-image: url("./assets/square-check-regular.png");
+	display: inline-block;	
+	width: 25px;
+	height: 25px;
+	background-size: contain;
+	background-repeat: no-repeat; */
 }
 
 @media screen and (max-width: 768px) {
@@ -232,6 +314,7 @@ main {
 	padding: 25px;
 	border: 3px solid black;
 }
+/* child static, child relative etc., from position float lesson */
 
 .block-container {
 	border: 1px solid black;
@@ -280,4 +363,61 @@ main {
     background-color: pink;
 
     float: right;
+}
+
+/* 
+	? Utility Classes
+	* a class with properties we reuse often
+	* instead of repeating ourselves
+	* build the class once
+	* add it to whatever element you created that needs it
+	* basis behind Tailwind and Bootstrap structure
+*/
+
+.flex-row {
+	display: flex;
+	flex-direction: row;
+}
+
+.flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+.fr-center {
+	justify-content: center;
+}
+
+.fc-center {
+	align-items: center;
+}
+
+footer {
+	gap: 200px;
+}
+
+/* 
+	? Media Queries
+	* allows you to set different rulesets based on different:
+		* screen size
+		* screen condition
+		* can choose from min-width, max-width, print, or screen
+*/
+
+@media print {
+	body {
+		background-color: red;
+	}
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+	footer {
+		flex-direction: column !important;
+	}
 }
