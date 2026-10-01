@@ -22,9 +22,9 @@
       <!-- <div class="bkgrnd-picture"> -->
       <nav id="nav-bar" class="nav-bar">
         <a class="nav-link" href="#about-me">About Me</a>
-        <a class="nav-link" href="">Skills</a>
-        <a class="nav-link" href="./assets/dog.avif">Projects</a>
-        <a class="nav-link" target="_blank" href="https://www.linkedin.com/in/patrick-dignan-12457a27a/">Contact</a>
+        <a class="nav-link" href="#skills">Skills</a>
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#contacts">Contact</a>
       </nav>
       <main class="section-container">
         <div class="hero-section">
@@ -50,7 +50,7 @@
           <!-- <div class="w-100 d-flex justify-content-center"> -->
             <!-- <article class="article">   -->
               <!-- <h2 id="about-me">About Me</h2> -->
-              <div class="image-container">
+              <div id="header-container">
                 <h2>About Me</h2>
                 <img style="width: 250px; height: 250px;" src="./assets/dog.avif" alt="Patrick Dignan" class="responsive-image" />
               </div>
@@ -96,11 +96,11 @@
           <!-- <div class="w-100 d-flex justify-content-center"> -->
             <!-- <article class="article">   -->
               <!-- <h2 id="about-me">About Me</h2> -->
-              <div class="image-container">
+              <div id="header-container">
                 <h2>Skills</h2>
                 <!-- <img style="width: 250px; height: 250px;" src="./assets/dog.avif" alt="Patrick Dignan" class="responsive-image" /> -->
               </div>
-               <div class="card-container">
+              <div class="skills-card-container">
                 <div class="card">
                 <div class="pic-container">
                   <img style="width: 250px; height: 250px;" src="./assets/dog.avif" alt class="face-pic">
@@ -181,7 +181,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="card">
+              <!-- <div class="card">
                 <div class="pic-container">
                   <img style="width: 250px; height: 250px;" src="./assets/dog.avif" alt class="face-pic";>
                 </div>
@@ -196,34 +196,19 @@
                     <li></li>
                   </ul>
                 </div>
+              </div> -->
+             
               </div>
-              <div class="responsive-text">
-                
-                
-                
-                <p>Prolonged investigation of errors using tools such as PowerShell and remote assistance software.</p>
-                
-                
-              </div>
-               </div>
-              
-            <!-- </article> -->
-		      <!-- </div> -->
-
-          <!-- <div class="display-container">
-            <div class="float-container">
-              <div class="float-box">Box</div>
-            </div>
-          </div> -->
         </div>
-        <div id="project" class="projects-section">
+        <div id="projects" class="projects-section">
           <!-- <div class="w-100 d-flex justify-content-center"> -->
             <!-- <article class="article">   -->
-              <div class="image-container">
+              <div id="header-container">
                 <h2>Projects</h2>
                 <!-- <img style="width: 250px; height: 250px;" src="./assets/dog.avif" alt="Patrick Dignan" class="responsive-image" /> -->
               </div>
-              <div class="card">
+              <div class="projects-card-container">
+                <div class="card">
                 <div class="pic-container">
                   <img style="width: 250px; height: 250px;" src="./assets/dog.avif" alt class="face-pic">;
                 </div>
@@ -232,15 +217,9 @@
                     C++ Game
                 </h6>
                 <p class="project-summary"><p>Hardware and software installation across Windows and Mac environments, including peripherals and internal components.</p></p>
-                <div class="social-test">
-                  <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                  </ul>
+                
                 </div>
-              </div>
-              <div class="card">
+                <div class="card">
                 <div class="pic-container">
                   <img style="width: 250px; height: 250px;" src="./assets/dog.avif" alt class="face-pic";>
                 </div>
@@ -256,8 +235,8 @@
                     <li></li>
                   </ul>
                 </div>
-              </div>
-              <div class="card">
+                </div>
+                <div class="card">
                 <div class="pic-container">
                   <img style="width: 250px; height: 250px;" src="./assets/dog.avif" alt class="face-pic";>
                 </div>
@@ -273,60 +252,8 @@
                     <li></li>
                   </ul>
                 </div>
-              </div>
-              <div class="card">
-                <div class="pic-container">
-                  <img style="width: 250px; height: 250px;" src="./assets/dog.avif" alt class="face-pic";>
                 </div>
-                <h6 class="skill-heading">
-                  Server Management
-                ::after
-                </h6>
-                <p class="skill-summary">Server management, including use of Active Directory, Azure and Intune.</p>
-                <div class="social-test">
-                  <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                  </ul>
-                </div>
-                
-              </div>
-              <div class="card">
-                <div class="pic-container">
-                  <img style="width: 250px; height: 250px;" src="./assets/dog.avif" alt class="face-pic";>
-                </div>
-                <h6 class="skill-heading">Networking</h6>
-              </div>
-              <div class="card">
-                <div class="pic-container">
-                  <img style="width: 250px; height: 250px;" src="./assets/dog.avif" alt class="face-pic";>
-                </div>
-                <h6 class="skill-heading">
-                  Security
-                  ::after
-                </h6>
-                <p class="skill-summary">Data security, including regular backups and security remediation across managed devices and systems.</p>
-                <div class="social-test">
-                  <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="responsive-text">
-                
-                
-                
-                <p>Prolonged investigation of errors using tools such as PowerShell and remote assistance software.</p>
-                
-                <p>Network configuration, including maintenance of IP addresses and access points.</p>
-                <p></p>
-
-              </div>
-            <!-- </article> -->
-		      <!-- </div> -->
+		          </div>
 
           <!-- <div class="display-container">
             <div class="float-container">
@@ -334,14 +261,67 @@
             </div>
           </div> -->
         </div>
+        <div id="contacts" class="contacts-section">
+          <div id="header-container">
+                <h2>Contact</h2>
+                <!-- <img style="width: 250px; height: 250px;" src="./assets/dog.avif" alt="Patrick Dignan" class="responsive-image" /> -->
+              </div>
+          <div class="w-100 d-flex justify-content-center">
+				    <div class="row g-3 w-75">
+              <div class="col-12">
+						    <p><a href="mailto:patrick.dignan@hotmail.co.uk">Send email</a></p>
+					    </div>
+              <div class="col-12">
+                <a href="https://www.linkedin.com/in/patrick-dignan-12457a27a/">
+						      <img src="./assets/linkedin_icon.svg">
+                </a>
+					    </div>
+              
+            </div>
+			    </div>
+          <div class="w-100 d-flex justify-content-center">
+				    <form class="row g-3 w-75">
+              
+					    <div class="col-12">
+						    <label for="inputEmail4" class="form-label">Email</label>
+						    <input type="email" class="form-control" id="inputEmail4">
+					    </div>
+					
+              <div class="col-12">
+						    <label for="inputType" class="form-label">Type of query:</label>
+						    <select id="inputType" class="form-select">
+							    <option selected>Choose...</option>
+							    <option>Application development</option>
+                  <option>Web development</option>
+						    </select>
+					    </div>
+
+					    <div class="col-12">
+						      <label for="inputQuestion" class="form-label">Question (max: 1000 characters)</label>
+						      <textarea maxlength="1000" name="message" style="height:400px;" placeholder="Enter your question here..."></textarea>
+					    </div>
+					    <div class="col-12">
+						      <button type="submit" class="btn btn-primary">Send</button>
+					    </div>
+              
+				    </form>
+			    </div>
         
+        </div>
       </main>
       <footer class="flex-row fr-center">
-			<h5>with love</h5>
-			<p>Some text</p>
-			<p>some other text</p>
-			<div class="logo"></div>
-		</footer>
+			  <h5>&copy; Patrick Dignan 2026</h5>
+			  <p>Some text</p>
+			  <p>some other text</p>
+        <div class="social-test">
+          <ol>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ol>
+        </div>
+			  <div class="logo"></div>
+		  </footer>
     </div>
   </body>
 </html>
