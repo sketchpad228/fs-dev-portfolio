@@ -230,7 +230,7 @@ main {
 	max-width: 1200px;
 	margin: 0 auto;
 	/* width: 75vw; */
-	/* height: 100vh; */
+	height: 100vh;
 	/* padding: 5px; */
 	/* font-family: Arial, Helvetica, sans-serif; */
 	/* margin: 25px; */
@@ -273,7 +273,7 @@ main {
 	/* flex-wrap: wrap; */
 	/* handles wrap of elements */
 	/* align-content: flex-start; */
-	justify-content: center;
+	/* justify-content: center; */
 	align-items: center;
 	background-color: beige;
 	border: 2px rounded black;
@@ -283,7 +283,8 @@ main {
 	max-width: 1200px;
 	margin: 0 auto;
 	width: 75vw;
-	/* height: 850vh; */
+	height: 100vh;
+	
 	/* padding: 5px; */
 	/* font-family: Arial, Helvetica, sans-serif; */
 	/* margin: 25px; */
