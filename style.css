@@ -246,7 +246,6 @@ main {
 	flex-direction: row;
 	flex-wrap: wrap;
 	/* handles wrap of elements */
-	overflow-x: auto /* Adds a horizontal scrollbar if boxes overflow the screen */
 	/* flex: 1 0 30%; */
 	justify-content: center;
 	align-items: center;
@@ -350,6 +349,7 @@ textarea {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+	overflow-x: auto /* Adds a horizontal scrollbar if boxes overflow the screen */
 	justify-content: center;
 	/* align-items: center; */
 	gap: var(--gap-primary);
