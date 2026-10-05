@@ -245,7 +245,7 @@ main {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	/* overflow-x: auto /* Adds a horizontal scrollbar if boxes overflow the screen */ */
+	/* overflow-x: auto /* Adds a horizontal scrollbar if boxes overflow the screen */
 	justify-content: center;
 	gap: var(--gap-primary);
 	width: 100%;
