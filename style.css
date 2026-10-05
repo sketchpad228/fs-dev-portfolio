@@ -76,26 +76,6 @@ h6 {
 	/* position: fixed; */
 }
 
-header {
-	padding: 2em 3em;
-
-	display: flex;
-	/* turns it into a flex container */
-
-	flex-direction: column;
-	/* changes the main axis direction (default is row) */
-
-	justify-content: space-between;
-	/* positions along the main axis */
-
-	align-items: center;
-	/* positions along the cross axis */
-
-	/* 
-		! If nothing happens, always check how much spacing you have !
-	*/
-}
-
 .main-header {
 	/* order: -9999; */
 	/* changes the order of a single child element */
@@ -264,7 +244,7 @@ main {
 .skills-card-container {
 	display: flex;
 	flex-direction: row;
-	flex-wrap: nowrap;
+	flex-wrap: wrap;
 	overflow-x: auto /* Adds a horizontal scrollbar if boxes overflow the screen */
 	justify-content: center;
 	/* align-items: center; */
@@ -306,7 +286,7 @@ main {
 .projects-card-container {
 	display: flex;
 	flex-direction: row;
-	/* flex-wrap: wrap; */
+	flex-wrap: wrap;
 	justify-content: center;
 	overflow-x: auto /* Adds a horizontal scrollbar if boxes overflow the screen */
 	align-items: stretch;
@@ -366,11 +346,11 @@ textarea {
 	/* display: flex; */
 	/* flew-wrap: nowrap; */
 	flex: 1;
-	flex-direction: row; !important
+	/* flex-direction: row; !important */
 	border: 1px solid var(--color-secondary-gray);
 	max-width: 250px;
 	height: 350px;
-	flex: 10px 10px 0px;
+	/* flex: 10px 10px 0px; */
 }
 
 face-pic {
