@@ -262,6 +262,17 @@ main {
 	/* position: relative; */
 }
 
+.skills-card-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	overflow-x: auto /* Adds a horizontal scrollbar if boxes overflow the screen */
+	justify-content: center;
+	/* align-items: center; */
+	gap: var(--gap-primary);
+	width: 100%;
+}
+
 .projects-section{
 	padding-top: 100px;
 	padding-bottom: 100px;
@@ -291,6 +302,17 @@ main {
 	/* position: relative; */
 	/* position: absolute; */
 	
+}
+
+.projects-card-container {
+	display: flex;
+	flex-direction: row;
+	/* flex-wrap: wrap; */
+	justify-content: center;
+	overflow-x: auto /* Adds a horizontal scrollbar if boxes overflow the screen */
+	align-items: stretch;
+	gap: var(--gap-primary);
+	width: 100%;
 }
 
 textarea {
@@ -339,29 +361,6 @@ textarea {
 	.contacts-section {
 		flex-direction: column;
 	}
-}
-
-
-.skills-card-container {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	overflow-x: auto /* Adds a horizontal scrollbar if boxes overflow the screen */
-	justify-content: center;
-	/* align-items: center; */
-	gap: var(--gap-primary);
-	width: 100%;
-}
-
-.projects-card-container {
-	display: flex;
-	flex-direction: row;
-	/* flex-wrap: wrap; */
-	justify-content: center;
-	overflow-x: auto /* Adds a horizontal scrollbar if boxes overflow the screen */
-	align-items: stretch;
-	gap: var(--gap-primary);
-	width: 100%;
 }
 
 .card {
