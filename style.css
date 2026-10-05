@@ -38,7 +38,6 @@ body {
 */
 
 header {
-
 	padding: 2em 3em;
 
 	display: flex;
@@ -52,7 +51,6 @@ header {
 
 	align-items: center;
 	/* positions along the cross axis */
-
 
 	/* 
 		! If nothing happens, always check how much spacing you have !
@@ -79,7 +77,6 @@ h6 {
 }
 
 header {
-
 	padding: 2em 3em;
 
 	display: flex;
