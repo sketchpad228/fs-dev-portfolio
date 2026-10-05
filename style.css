@@ -458,6 +458,7 @@ input {
 	}
 }
 
+/* The below mimics the 'Flexbox Holy Albatross' method */
 @media (max-width: 1063px) {
 	.projects-card-container {
 		flex-direction: column;
