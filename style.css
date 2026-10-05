@@ -332,7 +332,7 @@ textarea {
 		align-items: center;
 	}
 
-	.projects-section {
+	.projects-card-container {
 		flex-direction: column;
 	}
 
