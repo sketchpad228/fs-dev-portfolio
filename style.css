@@ -328,7 +328,7 @@ textarea {
 
 .card {
 	display: flex;
-	flew-wrap: nowrap;
+	flex-wrap: nowrap;
 	flex: 1;
 	/* flex-direction: row; !important */
 	border: 1px solid var(--color-secondary-gray);
@@ -339,7 +339,7 @@ textarea {
 
 .skill-card {
 	display: flex;
-	flew-wrap: nowrap;
+	flex-wrap: nowrap;
 	flex: 1;
 	/* flex-direction: row; !important */
 	border: 1px solid var(--color-secondary-gray);
@@ -350,7 +350,7 @@ textarea {
 
 .project-card {
 	display: flex;
-	flew-wrap: nowrap;
+	flex-wrap: nowrap;
 	flex: 1;
 	/* flex-direction: row; !important */
 	border: 1px solid var(--color-secondary-gray);
