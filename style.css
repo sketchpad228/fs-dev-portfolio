@@ -452,13 +452,15 @@ input {
 		flex-direction: column; /* Stack the elements vertically on smaller screens */
 		align-items: center;
 	}
+	
+	.contacts-section {
+		flex-direction: column;
+	}
+}
 
+@media (max-width: 1063px) {
 	.projects-card-container {
 		flex-direction: column;
 		align-items: center;
 	}
 
-	.contacts-section {
-		flex-direction: column;
-	}
-}
