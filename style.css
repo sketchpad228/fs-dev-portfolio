@@ -241,7 +241,7 @@ main {
 	padding-bottom: 100px;
 	display: flex;
 	flex-direction: row;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 	/* handles wrap of elements */
 	/* flex: 1 0 30%; */
 	justify-content: center;
@@ -249,7 +249,7 @@ main {
 	background-color: beige;
 	border: 2px rounded black;
 	width: 100%;
-	max-width: 1600px;
+	max-width: 2000px;
 	margin: 0 auto;
 	/* width: 75vw; */
 	/* height: 850vh; */
