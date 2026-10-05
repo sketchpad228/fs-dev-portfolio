@@ -373,6 +373,7 @@ textarea {
 	max-width: 250px;
 	height: 350px;
 	flex: 10px 10px 0px;
+	flex-shrink: 1;
 }
 
 face-pic {
