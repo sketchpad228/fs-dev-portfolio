@@ -1,3 +1,11 @@
+/*
+	? Selectors
+	Element - elements selectors have no prefix
+	ID = #
+	Class = .
+
+*/
+
 * {
 	font-family: Arial, Helvetica, sans-serif;
 	margin: 0;
@@ -82,13 +90,16 @@ h6 {
 }
 
 main {
+
+/* Bootstrap adds extra elements */
+
 	display: flex;
 
 	flex-wrap: wrap;
 	/* handles wrap of elements */
 
 	justify-content: center;
-	align-items: center;
+	/* align-items: center; */
 
 	/* height: 200vh; */
 	/* comment back in to play with align-content */
@@ -96,7 +107,7 @@ main {
 	/* align-content: flex-start; */
 	/* aligns against cross axis when wrapping is involved */
 
-	gap: var(--gap-primary);
+	/* gap: var(--gap-primary); */
 }
 
 /* The navigation bar */
@@ -259,31 +270,23 @@ main {
 	padding-top: 100px;
 	padding-bottom: 100px;
 	display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
+	flex-direction: row;
+	flex-wrap: wrap;
 	/* handles wrap of elements */
 	/* align-content: flex-start; */
-	/* justify-content: center; */
+	justify-content: center;
 	align-items: center;
 	
 	/* background-color: beige; */
-	border: 2px rounded black;
+	/* border: 2px rounded black; */
+
+	margin: 0 auto;
+
+	/* The @media (max-width: 1063px) method does the same thing with or without the two lines below, but maybe they can act as an enforcer if need be */
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(1fr, 3);
-	width: 100%;
-	max-width: 1200px;
-	max-height: 850vh;
-	margin: 0 auto;
-	width: 75vw;
-	/* height: 100vh; */
-	
-	/* padding: 5px; */
-	/* font-family: Arial, Helvetica, sans-serif; */
-	/* margin: 25px; */
-	/* gap: var(--gap-primary); */
+
 	gap: 25px;
-	/* position: relative; */
-	/* position: absolute; */
 	
 }
 
@@ -292,8 +295,9 @@ main {
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
-	overflow-x: auto /* Adds a horizontal scrollbar if boxes overflow the screen */
-	align-items: center;
+	/* overflow-x: auto; Adds a horizontal scrollbar if boxes overflow the screen */
+	/* overflow-y: */
+	/* align-items: center; */
 	gap: var(--gap-primary);
 	width: 100%;
 }
@@ -330,40 +334,51 @@ textarea {
 	/* position: absolute; */
 }
 
+.skills-card {
+	/* display: flex; */
+	/* flex-wrap: nowrap; */
+	/* border: 1px solid var(--color-secondary-gray); */
+	align-items: center;
+	max-width: 280px;
+	height: 380px;
+	/* flex: 10px 10px 0px; */
+}
+
 .card {
-	display: flex;
-	flex-wrap: nowrap;
-	border: 1px solid var(--color-secondary-gray);
-	max-width: 250px;
-	height: 350px;
+	/* Bootstrap class */ 
+
+	/* display: flex; */
+	/* flex-wrap: nowrap; */
+	/* border: 1px solid var(--color-secondary-gray); */
+	align-items: center;
+	max-width: 280px;
+	height: 380px;
 	/* flex: 10px 10px 0px; */
 }
 
-.skill-card {
+/* skills-card {
 	display: flex;
 	flex-wrap: nowrap;
-	flex: 1;
-	/* flex-direction: row; !important */
 	border: 1px solid var(--color-secondary-gray);
-	max-width: 250px;
-	height: 350px;
+	align-items: center;
+	max-width: 280px;
+	height: 380px;
 	/* flex: 10px 10px 0px; */
-}
-
+/*} */
+/* 
 .project-card {
 	display: flex;
 	flex-wrap: nowrap;
 	flex: 1;
 	/* flex-direction: row; !important */
-	border: 1px solid var(--color-secondary-gray);
+	/* border: 10px solid var(--color-secondary-gray);
 	max-width: 250px;
-	height: 350px;
+	height: 350px; */
 	/* flex: 10px 10px 0px; */
-}
-
+/* } */
 
 face-pic {
-	width: 250px;
+	width: 20px;
 }	
 
 /* .header-container, .responsive-text { */
@@ -389,6 +404,7 @@ image-container, .responsive-text {
 	display: block;
 	float: none;
 	/* object-fit: cover; */
+	border: 5px solid rgba(255, 0, 0, 0.5);
 }
 
 /* The max-width above also applies to responsive design (web browser) as well as mobile */
@@ -469,6 +485,8 @@ footer {
 }
 
 /* The below mimics the 'Flexbox Holy Albatross' method */
+/* Should I use the more specific 'mobile viewing' method, and then enforce it with the grid template columns for the projects section, because the method applies the column when the condition is met.
+/* Although that might affect something else*/
 @media (max-width: 1063px) {
 	.projects-card-container {
 		flex-direction: column;
