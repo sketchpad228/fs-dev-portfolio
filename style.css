@@ -18,32 +18,9 @@
 	--gap-primary: 1.5em;
 }
 
-/* ? ID selector (using the #) */
-/* #main-header {
-	display: flex;
-    background-color: blue;
-    color: white;
-    font-size: 20px;
-    padding: 20px 10px;
-
-    h1 {
-        text-align: center;
-    }
-} */
- 
 body {
 	font-family: Arial, Helvetica, sans-serif;
 }
-
-/* 
-	? Flexbox
-	* single dimensional
-	* allows to style components using parent > child relationship
-	* the parent is the component we use flexbox on
-	* children of said parent get affected
-	* uses properties and values custom to Flexbox module
-	* styles based on main and cross axes (they rotate!!!!)
-*/
 
 header {
 	padding: 2em 3em;
@@ -83,7 +60,6 @@ h6 {
 }
 
 main {
-
 /* Bootstrap adds extra elements */
 
 	display: flex;
@@ -93,14 +69,6 @@ main {
 
 	justify-content: center;
 	/* align-items: center; */
-
-	/* height: 200vh; */
-	/* comment back in to play with align-content */
-
-	/* align-content: flex-start; */
-	/* aligns against cross axis when wrapping is involved */
-
-	/* gap: var(--gap-primary); */
 }
 
 /* The navigation bar */
@@ -211,14 +179,7 @@ main {
 	width: 100%;
 	max-width: 1200px;
 	margin: 0 auto;
-	/* width: 75vw; */
-	/* height: 100vh; */
-	/* padding: 5px; */
-	/* font-family: Arial, Helvetica, sans-serif; */
-	/* margin: 25px; */
-	/* gap: var(--gap-primary); */
 	gap: 25px;
-	/* position: relative; */
 }
 
 .skills-section{
@@ -238,15 +199,7 @@ main {
 	width: 100%;
 	max-width: 2000px;
 	margin: 0 auto;
-	/* width: 75vw; */
-	/* height: 850vh; */
-	/* padding: 5px; */
-	/* font-family: Arial, Helvetica, sans-serif; */
-	/* margin: 25px; */
-	/* gap: var(--gap-primary); */
 	gap: 25px;
-
-	/* position: relative; */
 }
 
 .skills-card-container {
@@ -256,6 +209,16 @@ main {
 	justify-content: center;
 	gap: var(--gap-primary);
 	width: 100%;
+}
+
+.skills-card {
+	/* display: flex; */
+	/* flex-wrap: nowrap; */
+	/* border: 1px solid var(--color-secondary-gray); */
+	align-items: center;
+	max-width: 280px;
+	height: 380px;
+	/* flex: 10px 10px 0px; */
 }
 
 .projects-section{
@@ -269,12 +232,13 @@ main {
 	/* align-content: flex-start; */
 	justify-content: center;
 	align-items: center;
+	font-size:clamp(1.5rem, 4vw, 3rem);
 	
 	/* background-color: beige; */
 	/* border: 2px rounded black; */
-
+	width: 100%;
 	margin: 0 auto;
-
+	
 	/* The @media (max-width: 1063px) method does the same thing with or without the two lines below, but maybe they can act as an enforcer if need be */
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(1fr, 3);
@@ -285,12 +249,12 @@ main {
 
 .projects-card-container {
 	margin: 0;
-	min-height: 100vh;
-
+	/* min-height: 100vh; */
+	/* position: sticky; */
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: center;
+	/* justify-content: center; */
 	place-content: center;
 	/* background: repeating-linear-gradient(135deg,#A7DBDB 0 20px,#79BD9A 0 40px); */
 	/* overflow-x: auto; Adds a horizontal scrollbar if boxes overflow the screen */
@@ -305,64 +269,16 @@ textarea {
 	height: 80%;
 }
 
-.contacts-section{
-	padding-top: 100px;
-	padding-bottom: 100px;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	/* handles wrap of elements */
-	/* align-content: flex-start; */
-	justify-content: center;
-	align-items: center;
-	color: white;
-	/* background-color: beige; */
-	border: 2px rounded black;
-	width: 100%;
-	max-width: 1200px;
-	margin: 0 auto;
-	width: 75vw;
-	/* height: 850vh; */
-	/* padding: 5px; */
-	/* font-family: Arial, Helvetica, sans-serif; */
-	/* margin: 25px; */
-	/* gap: var(--gap-primary); */
-	gap: 25px;
-	/* position: relative; */
-	/* position: absolute; */
+/* The below mimics the 'Flexbox Holy Albatross' method */
+/* Should I use the more specific 'mobile viewing' method, and then enforce it with the grid template columns for the projects section, because the method applies the column when the condition is met.
+/* Although that might affect something else*/
+@media (max-width: 1547px) {
+	.projects-card-container {
+		flex-direction: column;
+		align-items: center;
+	}
 }
 
-.skills-card {
-	/* display: flex; */
-	/* flex-wrap: nowrap; */
-	/* border: 1px solid var(--color-secondary-gray); */
-	align-items: center;
-	max-width: 280px;
-	height: 380px;
-	/* flex: 10px 10px 0px; */
-}
-
-.card {
-	/* Bootstrap class */ 
-
-	/* display: flex; */
-	/* flex-wrap: nowrap; */
-	/* border: 1px solid var(--color-secondary-gray); */
-	align-items: center;
-	max-width: 280px;
-	height: 380px;
-	/* flex: 10px 10px 0px; */
-}
-
-/* skills-card {
-	display: flex;
-	flex-wrap: nowrap;
-	border: 1px solid var(--color-secondary-gray);
-	align-items: center;
-	max-width: 280px;
-	height: 380px;
-	/* flex: 10px 10px 0px; */
-/*} */
 /* 
 .project-card {
 	display: flex;
@@ -437,6 +353,10 @@ image-container, .responsive-text {
 	transition: opacity 0.3s ease; /*Smooth fade-in effect*/
 }
 
+.projects-pic-container {
+	
+}
+
 .projects-pic-container:hover .hover-text {
 	opacity: 1; /* Show text on hover */
 }
@@ -467,10 +387,61 @@ image-container, .responsive-text {
 	margin: 50px;
 	padding: 15px;
 	position: relative; */
+
+	
 }
 
 .responsive-image:hover {
 	font-size: var(--o);
+}
+
+.card {
+	/* Bootstrap class */
+
+	/* display: flex; */
+	/* flex-wrap: nowrap; */
+	/* border: 1px solid var(--color-secondary-gray); */
+	align-items: center;
+	max-width: 500px;
+	height: 380px;
+	/* flex: 10px 10px 0px; */
+
+	/* Am I able to add these? */
+	height: 0; */
+	overflow: hidden;
+	transition: all 0.3s ease;
+}
+
+.projects-dropdown-card
+{
+
+}
+
+.contacts-section{
+	padding-top: 100px;
+	padding-bottom: 100px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	/* handles wrap of elements */
+	/* align-content: flex-start; */
+	justify-content: center;
+	align-items: center;
+	color: white;
+	/* background-color: beige; */
+	border: 2px rounded black;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	width: 75vw;
+	/* height: 850vh; */
+	/* padding: 5px; */
+	/* font-family: Arial, Helvetica, sans-serif; */
+	/* margin: 25px; */
+	/* gap: var(--gap-primary); */
+	gap: 25px;
+	/* position: relative; */
+	/* position: absolute; */
 }
 
 /* The max-width above also applies to responsive design (web browser) as well as mobile */
@@ -548,15 +519,5 @@ input {
 
 footer {
 	color: white;	
-}
-
-/* The below mimics the 'Flexbox Holy Albatross' method */
-/* Should I use the more specific 'mobile viewing' method, and then enforce it with the grid template columns for the projects section, because the method applies the column when the condition is met.
-/* Although that might affect something else*/
-@media (max-width: 1063px) {
-	.projects-card-container {
-		flex-direction: column;
-		align-items: center;
-	}
 }
 
