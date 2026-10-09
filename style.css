@@ -70,18 +70,11 @@ h6 {
 }
 
 .main-container {
-	/* display: flex; */
-	/* flex-direction: column; */
-	/* align-items: center; */
-	/* justify-content: center; */
 	background: no-repeat url("./assets/photo-1661250136420-56b685db54f1.avif");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	min-height: 100vh;
+	min-height: 200vh;
 	background-color: black;
-	/* padding: 20px; */
-	/* position: sticky; */
-	/* position: fixed; */
 }
 
 .main-header {
@@ -291,10 +284,15 @@ main {
 }
 
 .projects-card-container {
+	margin: 0;
+	min-height: 100vh;
+
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
+	place-content: center;
+	/* background: repeating-linear-gradient(135deg,#A7DBDB 0 20px,#79BD9A 0 40px); */
 	/* overflow-x: auto; Adds a horizontal scrollbar if boxes overflow the screen */
 	/* overflow-y: */
 	/* align-items: center; */
@@ -377,10 +375,6 @@ textarea {
 	/* flex: 10px 10px 0px; */
 /* } */
 
-face-pic {
-	width: 20px;
-}	
-
 /* .header-container, .responsive-text { */
 	/* flex: 1; */
 /* } */
@@ -405,6 +399,78 @@ image-container, .responsive-text {
 	float: none;
 	/* object-fit: cover; */
 	border: 5px solid rgba(255, 0, 0, 0.5);
+}
+
+/* .projects-pic-container:before {
+	border: 5px solid #000;
+	content: "";
+	position: absolute;
+	top: -10;
+	bottom: -10;
+	left: -10;
+	right: -10;
+	/* border: 10px solid rgba(0, 0, 0, 0.3) */
+	/* pointer-events: none; */
+/* } */
+
+/* .projects-pic-container {
+	
+	/* position: relative; */
+	/* display: inline-block; */
+	/* width: 100%; */
+	/* max-width: 400px; */
+/* } */
+
+.hover-text {
+	/* position: absolute; */
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 10%;
+	background: rgba(0, 0, 0, 0.3); /*Semi-transparent dark overlay*/
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	opacity: 0; /* Hide text initially */
+	transition: opacity 0.3s ease; /*Smooth fade-in effect*/
+}
+
+.projects-pic-container:hover .hover-text {
+	opacity: 1; /* Show text on hover */
+}
+
+.responsive-image {
+	position: relative;
+
+	--b: 5px; /* border thickness */
+	--d: 20px; /* the distance from the edge */
+	--o: 20px; /* Offset of the border */
+	--s: 1; /* the direction of the hover effect (+1 or -1); */
+
+	--_d: calc(var(--d) + var(--s)*1em);
+	mask:
+		conic-gradient(from 90deg at var(--_d) var(--_d),#0000 25%,#000 0)
+			0 0/calc(100% - var(--_d)) calc(100% - var(--_d)),
+		conic-gradient(#000 0 0) no-repeat 50%/
+			calc(100% - 2*(var(--_d) + var(--b)))
+			calc(100% - 2*(var(--_d) + var(--b)));
+		
+	
+	font-size: 0;
+	cursor: pointer;
+	transition: .35s;
+
+	/* background: #000;
+	color: #fff;
+	margin: 50px;
+	padding: 15px;
+	position: relative; */
+}
+
+.responsive-image:hover {
+	font-size: var(--o);
 }
 
 /* The max-width above also applies to responsive design (web browser) as well as mobile */

@@ -52,7 +52,7 @@
           <!-- <h2 id="about-me">About Me</h2> -->
           <div id="header-container">
             <h2>About Me</h2>
-            <img style="width: 250px; height: 250px;" src="./assets/dog.avif" alt="Patrick Dignan" class="responsive-image" />
+            <img style="width: 250px; height: 250px;" src="./assets/dog.avif" alt="Patrick Dignan"/>
           </div>
           <div class="responsive-text">
             <p>
@@ -131,10 +131,10 @@
             </div>
             <div class="skills-card">
                 <div class="pic-container">
-                  <img style="width: 250px; height: 250px;" src="./assets/dog.avif" alt class="face-pic";>
+                  <img style="width: 250px; height: 250px;" src="./assets/dog.avif">
                 </div>
                 <h6 class="skill-heading">Lifecycle Management</h6>
-                <p class="skill-summary"> Software deployment and lifecycle management, including Office, security tools, and web applications.</p>
+                <p class="skill-summary">Software deployment and lifecycle management, including Office, security tools, and web applications.</p>
             </div>
             <div class="skills-card">
                 <div class="pic-container">
@@ -165,6 +165,7 @@
             </div>       
           </div>
         </div>
+        
         <div id="projects" class="projects-section">
           <!-- <div class="w-100 d-flex justify-content-center"> -->
           <!-- <article class="article">   -->
@@ -173,30 +174,33 @@
             <!-- <img style="width: 250px; height: 250px;" src="./assets/dog.avif" alt="Patrick Dignan" class="responsive-image" /> -->
           </div>
           <div class="projects-card-container">
-                <div class="card">
-                  <div class="pic-container">
-                    <img style="width: 250px; height: 250px;" src="./assets/dog.avif" alt class="face-pic";>
-                  </div>
-                  <h6 class="project-heading">Software Development</h6>
+                <!-- .card is Bootstrap class -->
+                <!-- <div class="card">  -->
+                  <figure class="projects-pic-container">
+                    <img style="width: 750px; height: 500px;" src="./assets/dog.avif" class="responsive-image">
+                    <figcaption class="hover-text">Game Dev</figcaption>
+                  </figure>
+                  <!-- <h6 class="project-heading">Software Development</h6> -->
                   <p class="project-summary">
-                    Experience of application development using C, C++ and C# using the .NET platform.
+                    <!-- Experience of application development using C, C++ and C# using the .NET platform.  -->
                   </p>
-                </div>
-                <div class="card">
-                  <div class="pic-container">
-                    <img style="width: 250px; height: 250px;" src="./assets/dog.avif" alt class="face-pic";>
+                <!-- </div> -->
+                <div class="card"> 
+                  <div class="projects-pic-container">
+                    <img style="width: 250px; height: 250px;" src="./assets/2D_Game.png" class="responsive-image">
                   </div>
                   <h6 class="skill-heading">Game Design</h6>
                   <p class="skill-summary">Game development using the C family with MonoGame, SFML, SDL and OpenGL devkits, 
                     - Game Development in GameMaker and Solarus.
+                    - Development of platformer game and top-down RPG with dynamic camera behaviours.
                     - Application development in C#.
                     - Application development with Unreal Engine and Unity.
                     - Experimentation with procedural generation of dungeons and terrain in Unreal Engine.
                   </p>
                 </div>
                 <div class="card">
-                  <div class="pic-container">
-                    <img style="width: 250px; height: 250px;" src="./assets/dog.avif" alt class="face-pic";>
+                  <div class="projects-pic-container">
+                    <img style="width: 250px; height: 250px;" src="./assets/dog.avif" class="responsive-image">
                   </div>
                   <h6 class="skill-heading">Web Development</h6>
                   <p class="skill-summary">Image deployment using IP address management system and SCCM.</p>
