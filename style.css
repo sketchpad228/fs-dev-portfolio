@@ -135,42 +135,43 @@ main {
 	/* margin: 10px 10px; */
 }
 
-.hero-section{
+#hero-section{
 	color: white;
 	/* background-color: beige; */
 	border: 2px rounded black;
 	width: 75vw;
 	height: 85vh;
-	padding: 5px;
-	font-family: Arial, Helvetica, sans-serif;
+	/* padding: 5px; */
+	padding: clamp(2rem, 6vw, 5rem);
 	margin: 25px;
 	display: flex;
+	flex-direction: row;
 	flex-wrap: wrap;
 	/* handles wrap of elements */
-
 	justify-content: center;
 	align-items: center;
-
 	/* height: 200vh; */
 	/* comment back in to play with align-content */
-
 	/* align-content: flex-start; */
 	/* aligns against cross axis when wrapping is involved */
-
 	gap: var(--gap-primary);
-
 	position: relative;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	width: 75vw;
 }
 
-.about-me-section{
+#about-me{
 	color: white;
-	padding-top: 100px;
+	padding: clamp(2rem, 6vw, 5rem);
+	padding-top: 200px;
 	padding-bottom: 500px;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	/* handles wrap of elements */
-
+	/* padding: clamp(2rem, 6vw, 5rem); */
 	justify-content: center;
 	/* align-items: center; */
 	
@@ -180,48 +181,79 @@ main {
 	max-width: 1200px;
 	margin: 0 auto;
 	gap: 25px;
+
+	width: 100%;
+	margin: 0 auto;
+	
 }
 
-.skills-section{
+#skills{
 	color: white;
 	padding-top: 100px;
 	padding-bottom: 100px;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+	padding: clamp(7rem, 7vw, 6rem);
 	/* handles wrap of elements */
 	/* flex: 1 0 30%; */
 	justify-content: center;
 	align-items: center;
-	
+	/* font-size:clamp(1.5rem, 4vw, 3rem); */
 	/* background-color: beige; */
 	border: 2px rounded black;
 	width: 100%;
-	max-width: 2000px;
 	margin: 0 auto;
+	max-width: 2000px;
 	gap: 25px;
 }
 
 .skills-card-container {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	flex-wrap: wrap;
 	justify-content: center;
 	gap: var(--gap-primary);
 	width: 100%;
 }
 
-.skills-card {
+.card {
+	/* Bootstrap class */
+
 	/* display: flex; */
 	/* flex-wrap: nowrap; */
-	/* border: 1px solid var(--color-secondary-gray); */
+	border: 1px solid var(--color-secondary-gray);
+	/* align-items: center; */
+	/* max-width: 500px; */
+	/* height: 380px; */
+	/* flex: 10px 10px 0px; */
+
+	box-sizing: border-box;
+	width: 100%;
+	padding: 1.5rem;
+	border-radius: 0.75rem;
+	/* Am I able to add these? */
+	height: 0; */
+	overflow: hidden;
+	transition: all 0.3s ease;
+}
+
+.skills-card {
+	box-sizing: border-box;
+	/* display: flex; */
+	/* flex-wrap: nowrap; */
+	border: 1px solid var(--color-secondary-gray);
 	align-items: center;
-	max-width: 280px;
-	height: 380px;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 1.5rem;
+	border-radius: 0.75rem;
+	/* max-width: 280px; */
+	/* height: 380px; */
 	/* flex: 10px 10px 0px; */
 }
 
-.projects-section{
+#projects{
 	color: white;
 	padding-top: 100px;
 	padding-bottom: 100px;
@@ -295,7 +327,7 @@ textarea {
 	/* flex: 1; */
 /* } */
 
-#header-container{
+.header-container{
 	/* width: 100%; */
 	/* height: auto; */
 	justify-content: center;
@@ -305,7 +337,7 @@ textarea {
 
 image-container, .responsive-text {
 	flex: 1;
-} */
+}
 
 .image-container{
 	/* width: 100%; */
@@ -329,20 +361,23 @@ image-container, .responsive-text {
 	/* pointer-events: none; */
 /* } */
 
-/* .projects-pic-container {
+.projects-pic-container {
 	
-	/* position: relative; */
+	position: relative;
 	/* display: inline-block; */
 	/* width: 100%; */
 	/* max-width: 400px; */
-/* } */
+	margin: 0 auto;
+}
 
 .hover-text {
-	/* position: absolute; */
+	position: absolute;
 	top: 0;
+	bottom: 0;
 	left: 0;
+	right: 0;
 	width: 100%;
-	height: 10%;
+	height: 100%;
 	background: rgba(0, 0, 0, 0.3); /*Semi-transparent dark overlay*/
 	color: white;
 	display: flex;
@@ -353,16 +388,10 @@ image-container, .responsive-text {
 	transition: opacity 0.3s ease; /*Smooth fade-in effect*/
 }
 
-.projects-pic-container {
-	
-}
-
-.projects-pic-container:hover .hover-text {
-	opacity: 1; /* Show text on hover */
-}
-
 .responsive-image {
 	position: relative;
+	margin: 0 auto;
+	/* width: 100%; */
 
 	--b: 5px; /* border thickness */
 	--d: 20px; /* the distance from the edge */
@@ -387,29 +416,14 @@ image-container, .responsive-text {
 	margin: 50px;
 	padding: 15px;
 	position: relative; */
-
-	
 }
 
 .responsive-image:hover {
 	font-size: var(--o);
 }
 
-.card {
-	/* Bootstrap class */
-
-	/* display: flex; */
-	/* flex-wrap: nowrap; */
-	/* border: 1px solid var(--color-secondary-gray); */
-	align-items: center;
-	max-width: 500px;
-	height: 380px;
-	/* flex: 10px 10px 0px; */
-
-	/* Am I able to add these? */
-	height: 0; */
-	overflow: hidden;
-	transition: all 0.3s ease;
+.projects-pic-container:hover .hover-text {
+	opacity: 1; /* Show text on hover */
 }
 
 .projects-dropdown-card
@@ -417,8 +431,8 @@ image-container, .responsive-text {
 
 }
 
-.contacts-section{
-	padding-top: 100px;
+#contacts{
+	padding-top: 110px;
 	padding-bottom: 100px;
 	display: flex;
 	flex-direction: row;
