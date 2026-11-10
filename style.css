@@ -47,7 +47,8 @@ h6 {
 }
 
 .main-container {
-	background: no-repeat url("./assets/photo-1661250136420-56b685db54f1.avif");
+	/* background: no-repeat url("./assets/photo-1661250136420-56b685db54f1.avif"); */
+	background: no-repeat url("./assets/ksusha-vasileva-yZL3663oF2I-unsplash.jpg");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	min-height: 200vh;
