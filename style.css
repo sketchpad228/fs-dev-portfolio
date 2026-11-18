@@ -50,6 +50,7 @@ h6 {
 	background: no-repeat url("./assets/photo-1661250136420-56b685db54f1.avif");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+	background-size: auto;
 	min-height: 200vh;
 	background-color: black;
 }
@@ -409,6 +410,53 @@ image-container, .responsive-text {
 {
 
 }
+
+/* Adding dropdown card that appears when clicking on project */
+
+.image-dropdown-container {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+}
+
+.toggle-checkbox {
+	display: none;
+}
+
+.image-trigger {
+	cursor: pointer;
+	display: block;
+}
+
+.image-trigger img {
+	display: block;
+	width: 100%;
+	max-width: 400px; /* Adjust size as needed */
+	height: auto;
+}
+
+.dropdown-caption {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.8);
+	color: #fff;
+	padding: 15px;
+	box-sizing: border-box;
+
+	transform: translateY(-100%);
+	opacity: 0;
+
+	transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+.toggle-checkbox:checked ~ .dropdown-caption {
+	transform: translateY(0);
+	opacity: 1;
+}
+
+/* End of dropdown card styles */
 
 #contacts{
 	padding-top: 110px;
